@@ -1,13 +1,16 @@
 import React from 'react';
-import Hero from "./assets/homepage/hero-bg-desktop.jpg";
-import Forest from './assets/homepage/enjoyable-place-desktop.jpg';
-import Local from './assets/homepage/locally-sourced-desktop.jpg';
-import Salmon from './assets/homepage/salmon-desktop-tablet.jpg';
-import Beef from './assets/homepage/beef-desktop-tablet.jpg';
-import Mousse from './assets/homepage/chocolate-desktop-tablet.jpg';
-import Elipse from './assets/homepage/elipse.png'
-import Group from './assets/homepage/Group.png';
-import Button from './layouts/Button';
+import Hero from "../assets/homepage/hero-bg-desktop.jpg";
+import Forest from '../assets/homepage/enjoyable-place-desktop.jpg';
+import Local from '../assets/homepage/locally-sourced-desktop.jpg';
+import Salmon from '../assets/homepage/salmon-desktop-tablet.jpg';
+import Beef from '../assets/homepage/beef-desktop-tablet.jpg';
+import Mousse from '../assets/homepage/chocolate-desktop-tablet.jpg';
+import Ready from '../assets/homepage/ready-bg-desktop.jpg';
+import Elipse from '../assets/homepage/elipse.png'
+import Group from '../assets/homepage/Group.png';
+import Button from '../layouts/Button';
+import Family from '../layouts/Family';
+import Footer from '../layouts/Footer';
 
 
 const Homepage = () => {
@@ -32,13 +35,13 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="px-4 sm:px-6 lg:px-36 flex justify-between">
+        <div className="w-full px-4 sm:px-6 lg:px-36 flex justify-between">
           <div className="-mt-20">
             <img className="absolute z-20 " src={Forest} alt="" />
             <div className='z-10 absolute w-box1 h-64 left-0 mt-96
              block rounded-tr-3xl bg-rectangle bg-opacity-10' />
           </div>
-          <div className="w-1/2 grid items-center content-center h-screen text-ebonyClay">
+          <div className="grid items-center content-center h-screen text-ebonyClay">
             <div className="max-w-md p-10">
               <img src={Elipse} alt="" />
               <h1 className="text-4xl font-bold py-7">Enjoyable place for all the family</h1>
@@ -51,8 +54,8 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="px-4 sm:px-6 lg:px-28 flex ">
-          <div className="w-1/2 grid items-center content-center h-screen text-ebonyClay">
+        <div className="w-full px-4 sm:px-6 lg:px-36 flex justify-between">
+          <div className="grid items-center content-center h-screen text-ebonyClay">
             <div className="max-w-md p-10">
               <img src={Elipse} alt="" />
               <h1 className="text-4xl font-bold py-7">The most locally sourced food</h1>
@@ -62,39 +65,42 @@ const Homepage = () => {
             </div>
           </div>
 
-          <div className="max-w-md">
-            <img className="absolute z-20 " src={Local} alt="" />
-            <div className="z-20 absolute h-auto right-24 mt-80 p-6
-             block">
+          <div>
+            <img className="absolute z-20" src={Local} alt="" />
+            <div className="z-20 absolute right-48 mt-80 p-6
+             ">
               <img src={Group} alt="" />
             </div>
             <div className='z-10 absolute w-box1 h-64 right-0 mt-96
              block rounded-tl-3xl bg-rectangle bg-opacity-10' />
+
           </div>
+          
         </div>
+
         <div className="bg-codGray h-auto -mt-28">
-          <div className="px-4 sm:px-6 lg:px-28 flex ">
-            <div className="w-1/2 grid items-center content-center h-screen text-white">
+          <div className="px-4 sm:px-6 lg:px-28 flex justify-between ">
+            <div className="grid items-center content-center h-screen text-white">
               <div className="max-w-md p-10">
                 <img src={Elipse} alt="" />
                 <h1 className="text-4xl font-bold py-7">A few highlights from our menu</h1>
                 <h2 className="">
-                  We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. 
+                  We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites.
                   Our menu is revamped every season.
                 </h2>
               </div>
             </div>
 
             <div className="max-w-md grid items-center content-center h-screen  text-white">
-             <div className="border-b-2 border-rectangle flex  w-auto py-5">
+              <div className="border-b-2 border-rectangle flex  w-auto py-5">
                 <img className="" src={Salmon} alt="" />
-              
+
                 <div className="h-0.5 w-16 mt-3 bg-beaver mr-3 font-extralight"></div>
-               <div>
-                 <h3 className="font-semibold">Seared Salmon Fillet</h3>
-                 <p className="font-extralight">Our locally sourced salmon served with a refreshing buckwheat summer salad.</p>
-               </div>
-             </div>
+                <div>
+                  <h3 className="font-semibold">Seared Salmon Fillet</h3>
+                  <p className="font-extralight">Our locally sourced salmon served with a refreshing buckwheat summer salad.</p>
+                </div>
+              </div>
 
               <div className="border-b-2 border-rectangle flex  w-auto py-5">
                 <img className="" src={Beef} alt="" />
@@ -115,12 +121,30 @@ const Homepage = () => {
                   <p className="font-extralight">Creamy mousse combined with summer fruits and dark chocolate shavings.</p>
                 </div>
               </div>
-            
-              
+
+
             </div>
           </div>
 
         </div>
+        <Family />
+
+        <div className="relative">
+          <img className="object-cover w-full" src={Ready} alt="" />
+          <div className="absolute top-20 px-4 sm:px-6 lg:px-36 flex justify-between w-full">
+            <h2 className="text-white font-semibold text-3xl tracking-wider ">Ready to make Reservation?</h2>
+            <Button
+              className=" text-whitetext-sm border"
+              paddingY="py-3"
+              paddingX="px-12"
+            >
+              BOOK A TABLE
+            </Button>
+          </div>
+        </div>
+
+        <Footer />
+
       </div>
 
     </>
